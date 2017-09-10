@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>Shoppinglists</h1>
+  <ul class="list-group">
+    {% for shoppinglist in shoppinglists %}
+      <li class="list-group-item"><a href="shoppinglist/{{shoppinglist.id}}">{{shoppinglist.title}}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}
